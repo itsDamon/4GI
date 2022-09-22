@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --divColor: #162447;
+    --divColorAltered: #0c1731;
+    --background: #000839;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+    background-color: var(--divColor);
+    position: sticky;
+    top: 0;
+}
+
+nav a,
+nav li {
+    color: white;
+    list-style: none;
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    background-color: var(--background);
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
+header {
+    margin: 30px;
+    padding: 20px;
+    background-color: var(--divColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    font-size: 50px;
+}
+
+.content {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text {
+    margin-top: 80px;
+}
+
+
+
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200, 200, 200);
+}
+
+td,
+th {
+    border: 1px solid gray;
+    padding: 25px 50px;
+    background-color: var(--divColor)
+}
+
+th {
+    background-color: var(--divColorAltered)
+}
+
+td {
+    text-align: center;
+}
+
+
+footer {
+    background-color: var(--background);
+    height: 100px;
+}
