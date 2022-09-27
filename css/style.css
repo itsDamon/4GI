@@ -67,33 +67,10 @@ header h1 {
 }
 
 
-
-
 .wrapper {
     display: flex;
     justify-content: center;
 }
-
-table {
-    border-collapse: collapse;
-    border: 2px solid rgb(200, 200, 200);
-}
-
-td,
-th {
-    border: 1px solid gray;
-    padding: 25px 50px;
-    background-color: var(--divColor)
-}
-
-th {
-    background-color: var(--divColorAltered)
-}
-
-td {
-    text-align: center;
-}
-
 
 footer {
     background-color: var(--background);
