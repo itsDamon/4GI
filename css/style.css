@@ -4,15 +4,16 @@
     box-sizing: border-box;
 }
 
-html,
-body {
-    background-color: var(--background);
-}
-
 :root {
     --divColor: #162447;
     --divColorAltered: #0c1731;
     --background: #000839;
+}
+
+html,
+body {
+    background-color: var(--background);
+    height: 100%;
 }
 
 nav {
@@ -71,9 +72,13 @@ header h1 {
     align-items: center;
 }
 
+.text{
+    margin: 3%;
+}
+
 .wrapper {
     display: flex;
-    overflow: auto;
+    overflow-x: auto;
 }
 
 table {
