@@ -73,13 +73,15 @@ header h1 {
 
 .wrapper {
     display: flex;
-    justify-content: center;
+
+    overflow: auto;
 }
 
 table {
     border-collapse: collapse;
     border: 2px solid rgb(200, 200, 200);
     margin-bottom: 5%;
+    width: 100%;
 }
 
 td,
@@ -145,7 +147,9 @@ footer a {
     }
 
     footer a {
+        padding: 6px;
         text-align: center;
+        font-size: 0.8rem;
     }
 
 }
