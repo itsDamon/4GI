@@ -111,6 +111,10 @@ th {
   background-color: var(--divColorAltered)
 }
 
+iframe {
+  margin: 30px;
+}
+
 footer {
   display: flex;
   flex-direction: row;
