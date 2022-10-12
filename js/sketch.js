@@ -1,4 +1,7 @@
-const moment = new Date();
-const pOrario = document.getElementById("pOrario");
-
-pOrario.innerHTML = "Sono le " + moment.getHours + ":" + moment.getMinutes + ":" + moment.getSecond;
+let data = new Date();
+let ora = data.getHours();
+let min = data.getMinutes();
+if (min < 10)
+    min = "0" + min;
+let msg = "Sono le " + ora + ":" + min;
+document.getElementById("pOrario").innerHTML = msg;
