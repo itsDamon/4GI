@@ -14,6 +14,7 @@ html,
 body {
   min-width: 100%;
   max-width: 100%;
+  color: white;
   font-family: 'Poppins', sans-serif;
   background-color: var(--background);
   height: auto;
@@ -71,13 +72,29 @@ a:visited {
 }
 
 main {
-  width: 100%;
+  width: 80%;
   background-color: var(--background);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   color: #fff;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+aside {
+  width: 20%;
+  position: relative;
+}
+
+aside li {
+  text-decoration: none;
+  list-style: none;
 }
 
 header {
