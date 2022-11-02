@@ -1,27 +1,33 @@
+function weekEnd() {
+  return !(giorno == 0 || giorno == 6);
+}
+
+let days = [
+  "domenica",
+  "lunedi",
+  "martedi",
+  "mercoledi",
+  "giovedi",
+  "venerdi",
+  "sabato",
+];
+
 let data = new Date();
-let ora = data.getHours();
-if (ora < 10) ora = "0"+ ora
-let min = data.getMinutes();
-if (min < 10) min = "0" + min;
-let msg = "Sono le " + ora + ":" + min;
-document.getElementById("pOrario").innerHTML = msg;
-
-
-
 let imgBuongiono = document.getElementById("imgBuongiorno");
 let pBuongiorno = document.getElementById("pBuongiorno");
 
+let ora = data.getHours();
+if (ora < 10) ora = "0" + ora;
+let min = data.getMinutes();
+if (min < 10) min = "0" + min;
+let sec = data.getSeconds();
+if (sec < 10) sec = "0" + sec;
+
+let msg = "Sono le " + ora + ":" + min + ":" + sec;
+document.getElementById("pOrario").innerHTML = msg;
+
 let giorno = data.getDay();
-imgBuongiorno.src = `../img/giorno${giorno}`;
 
-let days = {
-    0: "domenica",
-    1: "lunedì",
-    2: "martedì",
-    3: "mercoledì",
-    4: "giovedì",
-    5: "venerdì",
-    6: "sabato"
-}
+imgBuongiorno.src = `../img/${days[giorno]}.jpg`;
 
-pBuongiorno.innerHTML = `Buon ${days[giorno]}`;
+pBuongiorno.innerHTML = weekEnd() ? `Buon ${days[giorno]}!` : "Buon Weekend!";
