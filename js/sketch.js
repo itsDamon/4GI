@@ -15,6 +15,7 @@ let days = [
 let data = new Date();
 let imgBuongiono = document.getElementById("imgBuongiorno");
 let pBuongiorno = document.getElementById("pBuongiorno");
+let pOrario = document.getElementById("pOrario");
 
 let ora = data.getHours();
 if (ora < 10) ora = "0" + ora;
@@ -24,10 +25,12 @@ let sec = data.getSeconds();
 if (sec < 10) sec = "0" + sec;
 
 let msg = "Sono le " + ora + ":" + min + ":" + sec;
-document.getElementById("pOrario").innerHTML = msg;
+pOrario.innerHTML = msg;
 
 let giorno = data.getDay();
 
 imgBuongiorno.src = `../img/${days[giorno]}.jpg`;
 
-pBuongiorno.innerHTML = weekEnd() ? `Buon ${days[giorno]}!` : "Buon Weekend!";
+pBuongiorno.innerHTML = weekEnd()
+  ? `Mancano ${6 - giorno} giorni al Weekend`
+  : "Buon Weekend :)";
